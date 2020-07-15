@@ -7,7 +7,7 @@ DATABASE:
 
 Run in local:
 - Clone the repo in the local.
-- add DB configurations in initDB func, inside main.go file. 
+- add Postgres DB configurations in initDB func, inside main.go file. 
 - Then run the command `go run main.go'.
 
 API:
