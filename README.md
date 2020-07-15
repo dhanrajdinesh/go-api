@@ -14,6 +14,6 @@ API:
 Run the api with the header token `Token` and value `hunter2` to authorize the api
 - GET    /health                   : To check the api status
 - GET    /api/v1/orders            : List all the orders
-- GET    /api/v1/orders/:dateRange : Get orders in order date range 
+- GET    /api/v1/orders/:dateRange : Get orders between order date range 
 
 - POST /api/v1/data/:fileName      : load data into Postgres DB table  
