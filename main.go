@@ -34,7 +34,7 @@ func main() {
 	r.GET("/health", handlers.HandleHealth)
 
 	v1.GET("/orders", handlers.HandleListOrders(pgRepository))
-	v1.GET("/orders/:orderName", handlers.HandleGetOrder(pgRepository))
+	v1.GET("/orders/:dateRange", handlers.HandleGetOrder(pgRepository))
 	v1.POST("/data/:fileName", handlers.HandlePostData(pgRepository))
 
 	sigc := make(chan os.Signal, 1)

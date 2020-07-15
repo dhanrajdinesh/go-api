@@ -41,7 +41,7 @@ func HandleListOrders(r *repository.Repository) gin.HandlerFunc {
 
 func HandleGetOrder(r *repository.Repository) gin.HandlerFunc {
 	fn := func(c *gin.Context) {
-		order, err := r.GetOrder(c.Param("orderName"))
+		order, err := r.GetOrder(c.Param("dateRange"))
 		if err != nil {
 			if dbErr, ok := err.(repository.Dberror); ok {
 				c.AbortWithStatusJSON(dbErr.Code, err)

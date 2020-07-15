@@ -77,8 +77,8 @@ func (r Repository) ListOrders() ([]response.OrdersResponse, error) {
 	return orders, nil
 }
 
-func (r Repository) GetOrder(orderName string) ([]response.OrdersResponse, error) {
-	dates:= strings.Split(orderName,",")
+func (r Repository) GetOrder(dateRange string) ([]response.OrdersResponse, error) {
+	dates:= strings.Split(dateRange,",")
 	if len(dates) != 2 {
 		return nil, nil
 	}
